@@ -127,7 +127,15 @@ footer {
   background-color: #EECF08 !important;
   transform: scale(1.1); /* Transform effect on hover */
 }
-
+.log-out {
+  background-color: #FFDD00 !important;
+  color: #000000 !important;
+  text-decoration: none;
+  width: 5vw;
+  height: 5vh;
+  margin-bottom: 20vh;
+  margin-left: 90vw;
+}
 /*OpenSession.js*/
 
 .modal-overlay {

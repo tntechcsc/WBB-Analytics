@@ -1,12 +1,15 @@
 // HomePage.js
-import React, { useState } from 'react';
+
+import React,{useState} from 'react';
 import { useNavigate } from "react-router-dom";
 import SessionOption from './SessionOption.js';
 import MainLayout from '../../layouts/MainLayout.js' // Import the MainLayout component
 import './HomePage.css';
-import logo from '../../images/nESTlogo.png';
+import { useAuth } from '../../hooks/AuthProvider';
+
 
 const HomePage = () => {
+  const auth = useAuth();
   let navigate = useNavigate();
   const [isModalOpen, setModalOpen] = useState(false);
   
@@ -23,7 +26,6 @@ const HomePage = () => {
           <button onClick={() => gotoStats()} className="Linkish-Button2">
             Stats
           </button>
-
         <section className="about">
         </section>
         <SessionOption isOpen={isModalOpen} onClose={() => setModalOpen(false)}/>

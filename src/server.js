@@ -4,13 +4,14 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 // import routes
-const playerRoutes = require('./routes/playerRoutes');
-const seasonRoutes = require('./routes/seasonRoutes');
-const practiceRoutes = require('./routes/practiceRoutes');
 const drillRoutes = require('./routes/drillRoutes');
-const tempoEventRoutes = require('./routes/tempoRoutes');
-const shotEventRoutes = require('./routes/shotRoutes');
 const gameRoutes = require('./routes/gameRoutes');
+const playerRoutes = require('./routes/playerRoutes');
+const practiceRoutes = require('./routes/practiceRoutes');
+const seasonRoutes = require('./routes/seasonRoutes');
+const shotEventRoutes = require('./routes/shotRoutes');
+const tempoEventRoutes = require('./routes/tempoRoutes');
+const userRoutes = require('./routes/usersRoutes');
 
 const app = express();
 
@@ -42,8 +43,9 @@ app.use('/api/drills', drillRoutes);
 app.use('/api/tempoEvents', tempoEventRoutes);
 app.use('/api/shotEvents', shotEventRoutes);
 app.use('/api/games', gameRoutes);
+app.use('/api/users', userRoutes);
 
-const port = process.env.PORT || 3001; // Use environment variable or default to 3001
+const port = 3001; // Use environment variable or default to 3001
 // Start the server on a single port
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
