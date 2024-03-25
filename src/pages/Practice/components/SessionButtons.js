@@ -1,5 +1,5 @@
 import './SessionButtons.css';
-import SessionInfoModal from '../components/SessionInfoModal';
+import SessionInfoModal from './SessionInfoModal';
 import React, { useState } from 'react';
 
 const SessionButtons = ({ setOpponentTeam, setStartTime, setEndTime, setDate }) => {
@@ -34,22 +34,22 @@ const SessionButtons = ({ setOpponentTeam, setStartTime, setEndTime, setDate }) 
     return (
         <>
             {/*<div className='opp-team'>
-                <h3 style={{ color: 'white' }}> Opponent Team </h3>
+                <h3> Opponent Team </h3>
                 <input type="text" value={opponentTeamInput} onChange={(e) => setOpponentTeamInput(e.target.value)} />
             </div>*/}
 
             <div className='start-time'>
-                <h3 style={{ color: 'white' }}> Start Time </h3>
+                <h3> Start Time </h3>
                 <input type="time" value={startTimeInput} onChange={(e) => setStartTimeInput(e.target.value)} />
             </div>
 
             <div className='end-time'>
-                <h3 style={{ color: 'white' }}> End Time </h3>
+                <h3> End Time </h3>
                 <input type="time" value={endTimeInput} onChange={(e) => setEndTimeInput(e.target.value)} />
             </div>
 
             <div className='date'>
-                <h3 style={{ color: 'white' }}> Date </h3>
+                <h3> Date </h3>
                 <input type="date" value={dateInput} onChange={(e) => setDateInput(e.target.value)} />
             </div>
 

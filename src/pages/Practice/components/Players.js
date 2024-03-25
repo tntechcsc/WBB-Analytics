@@ -4,12 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
 
-const Players = () => {
-    const [listA, setListA] = useState([]);
-    const [listB, setListB] = useState([]);
-    const [playerData, setPlayerData] = useState([]);
-    const [SeasonData, setSeasonData] = useState([]);
-    
+const Players = ({ listA, setListA, listB, setListB, playerData, setPlayerData }) => {
+    const playerNames = playerData.map(player => player.name);
+
     const handleAddDropdownA = () => {
         const newPlayer = playerData.length > listA.length ? playerData[listA.length].name : `New Player ${listA.length + 1}`;
         setListA([...listA, { playerName: newPlayer }]);

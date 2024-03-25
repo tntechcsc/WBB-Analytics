@@ -1,5 +1,5 @@
 import './DrillButtons.css';
-import DrillModal from '../components/DrillModal';
+import DrillModal from './DrillModal';
 import React, { useState } from 'react';
 
 const DrillButtons = ({ drills, setDrills }) => {
